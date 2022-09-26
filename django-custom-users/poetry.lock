@@ -1,38 +1,30 @@
 [[package]]
 name = "asgiref"
-version = "3.4.1"
+version = "3.5.2"
 description = "ASGI specs, helper code, and adapters"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.extras]
-tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
+tests = ["mypy (>=0.800)", "pytest", "pytest-asyncio"]
 
 [[package]]
-name = "django"
-version = "3.2.8"
-description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
+name = "Django"
+version = "4.1.1"
+description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 
 [package.dependencies]
-asgiref = ">=3.3.2,<4"
-pytz = "*"
+asgiref = ">=3.5.2,<4"
 sqlparse = ">=0.2.2"
+tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 
 [package.extras]
 argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
-
-[[package]]
-name = "pytz"
-version = "2021.3"
-description = "World timezone definitions, modern and historical"
-category = "main"
-optional = false
-python-versions = "*"
 
 [[package]]
 name = "sqlparse"
@@ -42,25 +34,33 @@ category = "main"
 optional = false
 python-versions = ">=3.5"
 
+[[package]]
+name = "tzdata"
+version = "2022.4"
+description = "Provider of IANA time zone data"
+category = "main"
+optional = false
+python-versions = ">=2"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "96f68aefb1f66289504344472ded31ffbe839d606fb03f13295f440a18432f63"
+content-hash = "662b91b80875ccfa4eddfdf2960e580bdaaf90d0c608e9a05e8623a9ca75e433"
 
 [metadata.files]
 asgiref = [
-    {file = "asgiref-3.4.1-py3-none-any.whl", hash = "sha256:ffc141aa908e6f175673e7b1b3b7af4fdb0ecb738fc5c8b88f69f055c2415214"},
-    {file = "asgiref-3.4.1.tar.gz", hash = "sha256:4ef1ab46b484e3c706329cedeff284a5d40824200638503f5768edb6de7d58e9"},
+    {file = "asgiref-3.5.2-py3-none-any.whl", hash = "sha256:1d2880b792ae8757289136f1db2b7b99100ce959b2aa57fd69dab783d05afac4"},
+    {file = "asgiref-3.5.2.tar.gz", hash = "sha256:4a29362a6acebe09bf1d6640db38c1dc3d9217c68e6f9f6204d72667fc19a424"},
 ]
-django = [
-    {file = "Django-3.2.8-py3-none-any.whl", hash = "sha256:42573831292029639b798fe4d3812996bfe4ff3275f04566da90764daec011a5"},
-    {file = "Django-3.2.8.tar.gz", hash = "sha256:f6d2c4069c9b9bfac03bedff927ea1f9e0d29e34525cec8a68fd28eb2a8df7af"},
-]
-pytz = [
-    {file = "pytz-2021.3-py2.py3-none-any.whl", hash = "sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c"},
-    {file = "pytz-2021.3.tar.gz", hash = "sha256:acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326"},
+Django = [
+    {file = "Django-4.1.1-py3-none-any.whl", hash = "sha256:acb21fac9275f9972d81c7caf5761a89ec3ea25fe74545dd26b8a48cb3a0203e"},
+    {file = "Django-4.1.1.tar.gz", hash = "sha256:a153ffd5143bf26a877bfae2f4ec736ebd8924a46600ca089ad96b54a1d4e28e"},
 ]
 sqlparse = [
     {file = "sqlparse-0.4.2-py3-none-any.whl", hash = "sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d"},
     {file = "sqlparse-0.4.2.tar.gz", hash = "sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae"},
+]
+tzdata = [
+    {file = "tzdata-2022.4-py2.py3-none-any.whl", hash = "sha256:74da81ecf2b3887c94e53fc1d466d4362aaf8b26fc87cda18f22004544694583"},
+    {file = "tzdata-2022.4.tar.gz", hash = "sha256:ada9133fbd561e6ec3d1674d3fba50251636e918aa97bd59d63735bef5a513bb"},
 ]
