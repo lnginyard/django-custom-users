@@ -6,7 +6,7 @@ authors = ["Lorenzo Ginyard <lnginyard@gmail.kenzie.academy.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "^4.0.0"
+Django = "^5.0.0"
 
 [tool.poetry.dev-dependencies]
 
